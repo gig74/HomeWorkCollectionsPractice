@@ -15,7 +15,7 @@ public class StudentCommandHandler {
         Action action = command.getAction();
         switch(action) {
             case CREATE -> {
-                procssCreateCommand(command);
+                processCreateCommand(command);
                 break;
             }
             case UPDATE -> {
@@ -60,7 +60,7 @@ public class StudentCommandHandler {
         studentStorage.printMap(data);
     }
 
-    private void procssCreateCommand(Command command) {
+    private void processCreateCommand(Command command) {
         String data = command.getData();
         String[] dataArray = data.split(",");
         Student student = new Student();
